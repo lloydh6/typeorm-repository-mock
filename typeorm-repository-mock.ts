@@ -1,6 +1,10 @@
 export class MockTypeORMRepository {
   readonly queryBuilderObject = {
     where: () => this.queryBuilderObject,
+    update: () => this.queryBuilderObject,
+    set: () => this.queryBuilderObject,
+    returning: () => this.queryBuilderObject,
+    execute: () => [],
     getMany: () => []
   }
 
@@ -22,5 +26,10 @@ export class MockTypeORMRepository {
   // find
   async find() {
     
+  }
+
+  // findOne
+  async findOne() {
+
   }
 }
